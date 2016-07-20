@@ -1,73 +1,79 @@
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Shuffle and Sort</title>
   <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Aleksandar Dunchev">
+  <title>Shuffle and Sort</title>
 </head>
 <body>
-  <header>
+  <header class="main-header">
     <div class="container">
-      <h1>Shuffle and Sort</h1>
+      <h1 class="header-title">Shuffle and Sort</h1>
     </div>
   </header>
 
-  <div class="container">
+  <div class="main-content container clearfix">
     <div class="row">
-      <ul id="itemList" class="item-list col-md-9 clearfix">
-        <li id="item-1" class="item bg-blue-grey">
+      <div class="buttons-container col-md-4-off">
+        <button id="shuffleBtn" class="btn shuffle">Shuffle</button>
+        <button id="sortBtn" class="btn sort">Sort</button>
+      </div>
+
+      <ul id="itemList" class="item-list col-md-8-off clearfix">
+        <li id="item-1" class="item bg-blue-grey col-md-4">
           <div class="item-inner">
             <span class="item-text">1</span>
           </div>
         </li>
-        <li id="item-2" class="item bg-blue">
+        <li id="item-2" class="item bg-blue col-md-4">
           <div class="item-inner">
             <span class="item-text">2</span>
           </div>
         </li>
-        <li id="item-3" class="item bg-dark-blue">
+        <li id="item-3" class="item bg-dark-blue col-md-4">
           <div class="item-inner">
             <span class="item-text">3</span>
           </div>
         </li>
-        <li id="item-4" class="item bg-blue">
+        <li id="item-4" class="item bg-blue col-md-4">
           <div class="item-inner">
             <span class="item-text">4</span>
           </div>
         </li>
-        <li id="item-5" class="item bg-dark-blue">
+        <li id="item-5" class="item bg-dark-blue col-md-4">
           <div class="item-inner">
             <span class="item-text">5</span>
           </div>
         </li>
-        <li id="item-6" class="item bg-grey">
+        <li id="item-6" class="item bg-grey col-md-4">
           <div class="item-inner">
             <span class="item-text">6</span>
           </div>
         </li>
-        <li id="item-7" class="item bg-grey">
+        <li id="item-7" class="item bg-grey col-md-4">
           <div class="item-inner">
             <span class="item-text">7</span>
           </div>
         </li>
-        <li id="item-8" class="item bg-blue-grey">
+        <li id="item-8" class="item bg-blue-grey col-md-4">
           <div class="item-inner">
             <span class="item-text">8</span>
           </div>
         </li>
-        <li id="item-9" class="item bg-dark-blue">
+        <li id="item-9" class="item bg-dark-blue col-md-4">
           <div class="item-inner">
             <span class="item-text">9</span>
           </div>
         </li>
       </ul>
-
-      <div class="buttons-container col-md-3">
-        <button id="shuffleBtn" class="btn shuffle">Shuffle</button>
-        <button id="sortBtn" class="btn sort">Sort</button>
-      </div>
     </div>
-
-  </div>
+  </div><!-- end main-content-->
+  <footer class="main-footer">
+    <div class="container">
+      <p class="authored">Shuffle and sort by <cite>Aleksandar Dunchev<cite></p>
+    </div>
+  </footer>
   <script src="assets/script.js"></script>
 </body>
 </html>

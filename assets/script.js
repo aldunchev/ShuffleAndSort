@@ -14,7 +14,7 @@ var shuffleAndSortModule = (function () {
     for(var i = 0; i < items.length; i++) {
       itemList.appendChild(items[i]);
       // Use class name instead of classList, because of IE.
-      items[i].children[0].className += ' anim';
+      items[i].children[0].className += ' animate';
     }
   }
 
@@ -49,7 +49,7 @@ var shuffleAndSortModule = (function () {
     items = nodeListToArray(items);
 
     items.sort(function(a, b) {
-      // Use only the numbers from the id.
+      // Use only the number from the id.
       var aord = +a.id.split('-')[1],
           bord = +b.id.split('-')[1];
       return aord - bord;

@@ -19,33 +19,30 @@ ul {
 }
 
 body {
+  margin: 0;
+  padding-top: 50px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #efefef;
+  background-color: #fff;
 }
 
-/* Helper classes */
-.bg-dark-blue {
-  background-color: #2f464e;
+@media (min-width: 768px) {
+  body {
+    padding-top: 70px;
+    background-color: #efefef;
+  }
 }
 
-.bg-blue {
-  background-color: #2b8ead;
-}
-
-.bg-blue-grey {
-  background-color: #6f99a9;
-}
-
-.bg-grey {
-  background-color: #bfbfbf;
+h1 {
+  font-size: 28px;
 }
 
 /* Grid */
 .container {
   max-width: 1170px;
-  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-right: auto;
-  margin-top: 50px;
+  margin-left: auto;
 }
 
 .row {
@@ -53,65 +50,195 @@ body {
   margin-right: -15px;
 }
 
-.col-md-9,
-.col-md-3 {
+.col-md-8-off,
+.col-md-4-off,
+.col-md-4 {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.col-md-9 {
-  width: 75%;
-}
-
-.col-md-3 {
-  width: 25%;
-}
-
-@media (min-width: 376px) {
-  .col-md-9,
-  .col-md-3 {
+@media (min-width: 768px) {
+  .col-md-8-off,
+  .col-md-4-off,
+  .col-md-4 {
     float: left;
+  }
+
+  .col-md-8-off,
+  .col-md-4-off {
+    margin-right: -100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-8-off {
+    width: 66.66666%;
+    margin-left: 0;
+  }
+
+  .col-md-4 {
+    width: 33.333333%;
+  }
+
+  .col-md-4-off {
+    width: 33.333333%;
+    margin-left: 66.66666%;
+  }
+}
+
+@media (max-width: 767px) {
+  .buttons-container {
+    text-align: center;
   }
 }
 
 .btn {
   display: inline-block;
   vertical-align: middle;
-  min-width: 250px;
+  min-width: 100px;
+  margin-bottom: 20px;
   padding: 20px;
   border: 0 none;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px;
+  font-weight: 300;
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
   background-color: #73c3dc;
   color: #fff;
   cursor: pointer;
+  box-shadow: 0 5px 0 0 #2b8ead;
+  border-radius: 8px;
   transition: background-color 0.2s ease;
+  outline: none;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    display: block;
+    min-width: 250px;
+    font-size: 16px;
+  }
+}
+
+.authored,
+cite {
+  font-style: italic;
 }
 
 .btn:hover {
+  box-shadow: 0 5px 0 0 #2f464e;
   background-color: #2f464e;
 }
 
-.item-list {
-  width: 600px;
+.main-content {
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    margin-top: 30px;
+  }
+}
+
+/* Header */
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: #333;
+}
+
+@media (min-width: 768px) {
+  .main-header {
+    height: 70px;
+    background-color: #fff;
+    box-shadow: 0 5px 0 0 #a7a7a7;
+  }
+}
+
+.header-title {
+  margin: 10px 0;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .header-title {
+    margin: 16px 0;
+    font-size: 28px;
+    color: #000;
+  }
 }
 
 .item {
-  float: left;
-  width: 33.33333%;
+  position: relative;
+  background-color: #efefef;
+}
+
+@media (min-width: 768px) {
+  .bg-dark-blue {
+    background-color: #2f464e;
+  }
+
+  .bg-blue {
+    background-color: #2b8ead;
+  }
+
+  .bg-blue-grey {
+    background-color: #6f99a9;
+  }
+
+  .bg-grey {
+    background-color: #bfbfbf;
+  }
+}
+
+@media (max-width: 767px) {
+  .item:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 10px;
+    height: 100%;
+  }
+
+  .item.bg-dark-blue:before {
+    background-color: #2f464e;
+  }
+
+  .item.bg-blue:before {
+    background-color: #2b8ead;
+  }
+
+  .item.bg-blue-grey:before {
+    background-color: #6f99a9;
+  }
+
+  .item.bg-grey:before {
+    background-color: #bfbfbf;
+  }
 }
 
 .item-inner {
   position: relative;
-  height: 200px;
+  height: 50px;
+  margin-bottom: 5px;
   transition: all 0.4s ease;
   opacity: 1;
 }
+@media (min-width: 768px) {
+  .item-inner {
+    height: 200px;
+    margin-bottom: 0;
+  }
+}
 
-.item-inner.anim {
+.item-inner.animate {
   animation: fade 0.5s ease 1;
 }
 
@@ -121,11 +248,27 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100px;
+  height: 22px;
   margin: auto;
   text-align: center;
-  font-size: 90px;
-  color: #fff;
+  font-size: 22px;
+  color: #000;
+}
+@media (min-width: 768px) {
+  .item-text {
+    height: 100px;
+    font-size: 90px;
+    color: #fff;
+  }
+}
+
+.main-footer {
+  text-align: center;
+}
+
+.main-footer .authored {
+  font-size: 14px;
+  font-weight: 300;
 }
 
 @keyframes fade {
