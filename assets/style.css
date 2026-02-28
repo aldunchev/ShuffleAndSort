@@ -126,6 +126,16 @@ cite {
   font-style: italic;
 }
 
+.btn.reverse {
+  background-color: #e8913a;
+  box-shadow: 0 5px 0 0 #b5702a;
+}
+
+.btn.reverse:hover {
+  background-color: #b5702a;
+  box-shadow: 0 5px 0 0 #8a5520;
+}
+
 .btn:hover {
   box-shadow: 0 5px 0 0 #2f464e;
   background-color: #2f464e;
