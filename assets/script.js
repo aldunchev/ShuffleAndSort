@@ -2,6 +2,7 @@ var shuffleAndSortModule = (function () {
 
   var shuffleBtn = document.querySelector('#shuffleBtn'),
       sortBtn = document.querySelector('#sortBtn'),
+      reverseBtn = document.querySelector('#reverseBtn'),
       itemList = document.querySelector('#itemList');
 
   // Convert nodeList object to array, so it can be processed.
@@ -58,10 +59,24 @@ var shuffleAndSortModule = (function () {
     appendNewItems(items);
   } // End sort function.
 
+  function reverse (event) {
+    event.stopPropagation();
+    var items = document.querySelectorAll('.item'),
+        itemsLength = items.length;
+
+    if ( itemsLength === 0 ) return false;
+
+    items = nodeListToArray(items);
+    items.reverse();
+
+    appendNewItems(items);
+  } // End reverse function.
+
   return {
     init: function() {
       shuffleBtn.addEventListener('click', shuffle, false);
       sortBtn.addEventListener('click', sort, false);
+      reverseBtn.addEventListener('click', reverse, false);
     }
   };
 
